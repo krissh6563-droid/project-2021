@@ -1,0 +1,7 @@
+.vscode/
+.idea/
+portal_erp/
+*.log
+*.pot
+*.pyc
+

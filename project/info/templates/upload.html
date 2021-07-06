@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div id="promo">
+    <div class="jumbotron text-center">
+        <h1>Upload File</h1>
+        <form action="encrypt" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="file" name="file">
+            <input type="submit" class="btn btn-primary" value="Encrypt">
+        </form>
+    </div>
+</div>
+
+{% endblock %}

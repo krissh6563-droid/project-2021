@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <div class="container center  mt-4">
+        <h1>Download File</h1>
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">S.No.</th>
+                    <th scope="col">File Name</th>
+                    <th scope="col">Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for item in data %}
+                  <tr>
+                    <th>{{ item.id }}</th>
+                    <td>{{ item.file_field }}</td>
+                    <td><a href="{{ item.file_field.url }}" download="{{ item.file_field.url }}">Decrypt</a></td>
+                  </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+        </div>
+    </div>
+    
+{% endblock %}
